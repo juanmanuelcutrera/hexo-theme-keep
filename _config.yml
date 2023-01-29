@@ -11,10 +11,10 @@
 # ---------------------------------------------------------------------------------------
 base_info:
   # Your blog website title
-  title: Keep Theme
+  title: binmodule
 
   # Your blog website author name
-  author: Keep Team
+  author: Juan Manuel Cutrera
 
 # ---------------------------------------------------------------------------------------
 # Theme style settings
@@ -22,25 +22,25 @@ base_info:
 # ---------------------------------------------------------------------------------------
 style:
   # Theme primary color
-  primary_color: "#0066cc"
+  primary_color: "#2bbc8a"
 
   # Your blog website logo image
   # You can use local image, image external link or don't fill
-  logo: /images/logo.svg
+  logo: /images/module.svg
 
   # Favicon (You can use local image or image external link)
-  favicon: /images/logo.svg
+  favicon: /images/module.svg
 
   # Avatar (You can use local image or image external link)
   avatar: /images/avatar.svg
 
   # Font size, customize font size. (you don't usually have to fill)
   # e.g. font_size: 18px
-  font_size:
+  font_size:  15.2px
 
   # Font family, customize font family. (you don't usually have to fill)
   # e.g. font_family: STKaiti, STSong, STHeiti
-  font_family:
+  font_family: Meslo LG
 
   # Mouse hover style settings
   hover:
@@ -51,21 +51,26 @@ style:
 
   # First screen style settings
   first_screen:
-    enable: false  # Option values: true | false
+    enable: true  # Option values: true | false
 
     # Set transparent background for header
-    header_transparent: false  # Option values: true | false
+    header_transparent: true  # Option values: true | false
 
     # First screen background image (You can use local image or image external link)
-    background_img: /images/bg.svg
+    background_img:
 
     # First screen description
     # You can use the "||" to begin a newline, maximum is two lines.
-    description: Keep writing and Keep loving.
+    description: printf(¡Hola, mundo!);||cout << ¡Hola, mundo!;||System.out.println(¡Hola, mundo!);||Console.WriteLine(¡Hola, mundo!);||console.log(¡Hola, mundo!);||println(¡Hola, mundo!); 
+    
+    description2: Este es mi espacio de experimentación.
 
     # If you want to customize the first screen font color, you can fill in here (e.g. "#0066CC")
     # Otherwise use the theme default font color
-    font_color:
+    font_color: "#33D09A"
+
+    font_color2: "#0066CC"
+
 
     # If enable hitokoto, first screen description is different every time when you enter the site
     hitokoto: false  # Option values: true | false
@@ -76,7 +81,7 @@ style:
     progress_bar: false # Option values: true | false
 
     # Show percent when page scroll
-    percent: false      # Option values: true | false
+    percent: true      # Option values: true | false
 
 # ---------------------------------------------------------------------------------------
 # Navigation menu
@@ -87,6 +92,9 @@ style:
 menu:
   Home: /
   Archives: /archives
+  Categories: /categories
+  Tags: /tags
+  About: /about
   # Tags: /tags
   # Categories: /categories
   # Links: /links
@@ -148,9 +156,9 @@ post:
   # Dependencies: hexo-wordcount (`npm install hexo-wordcount`)
   # See: https://github.com/willin/hexo-wordcount
   word_count:
-    enable: false       # Option values: true | false
-    wordcount: false    # Word count, one article. Option values: true | false
-    min2read: false     # Time to read, one article. Option values: true | false
+    enable: true       # Option values: true | false
+    wordcount: true    # Word count, one article. Option values: true | false
+    min2read: true     # Time to read, one article. Option values: true | false
 
   # Image align position in the post
   img_align: left  # Option values: left | center
@@ -174,10 +182,10 @@ code_block:
 # Docs: https://keep-docs.xpoet.cn/tutorial/configuration-guide/toc.html
 # ---------------------------------------------------------------------------------------
 toc:
-  enable: false      # Option values: true | false
+  enable: true      # Option values: true | false
 
   # Automatically add list number to toc
-  number: false      # Option values: true | false
+  number: true      # Option values: true | false
 
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
   expand_all: false  # Option values: true | false
@@ -193,7 +201,7 @@ website_count:
   # busuanzi
   # See: http://ibruce.info/2015/04/04/busuanzi/
   busuanzi_count:
-    enable: false     # Option values: true | false
+    enable: true     # Option values: true | false
     site_uv: false    # Option values: true | false
     site_pv: false    # Option values: true | false
     page_pv: false    # Option values: true | false
@@ -205,16 +213,16 @@ website_count:
 # See: https://github.com/theme-next/hexo-generator-searchdb
 # ---------------------------------------------------------------------------------------
 local_search:
-  enable: false   # Option values: true | false
-  preload: false  # Preload the search data when the page loads. Option values: true | false
+  enable: true   # Option values: true | false
+  preload: true  # Preload the search data when the page loads. Option values: true | false
 
 # ---------------------------------------------------------------------------------------
 # Comment plugin
 # Docs: https://keep-docs.xpoet.cn/tutorial/configuration-guide/comment.html
 # ---------------------------------------------------------------------------------------
 comment:
-  enable: false   # Option values: true | false
-  use: valine     # Option values: valine | gitalk | twikoo | waline
+  enable: true   # Option values: true | false
+  use: gitalk     # Option values: valine | gitalk | twikoo | waline
 
   # Valine
   # See: https://github.com/xCss/Valine
@@ -228,13 +236,23 @@ comment:
   # Gitalk
   # See: https://github.com/gitalk/gitalk
   #      https://gitalk.github.io
+  
+  #gitalk:
+  #  github_id:        # GitHub repo owner
+  #  github_admins:    # GitHub Admins (in Array type), optional
+  #  repository:       # Repository name to store issues
+  #  client_id:        # GitHub Application Client ID
+  #  client_secret:    # GitHub Application Client Secret
+  # proxy:            # GitHub oauth request reverse proxy for CORS
+ 
   gitalk:
-    github_id:        # GitHub repo owner
-    github_admins:    # GitHub Admins (in Array type), optional
-    repository:       # Repository name to store issues
-    client_id:        # GitHub Application Client ID
-    client_secret:    # GitHub Application Client Secret
-    proxy:            # GitHub oauth request reverse proxy for CORS
+    github_id:  juanmanuelcutrera
+    repository:  MyBlogComments
+    client_id:  cd664f2cb03fdcd77774
+    client_secret:  6a1d732b482fbcbaaf2bf018f5d5625b6ace9809
+    language: es-ES    
+    distractionFreeMode: true
+    enableHotKey: true
 
   # Twikoo
   # See: https://github.com/imaegoo/twikoo
@@ -266,7 +284,7 @@ rss:
 # Docs: https://keep-docs.xpoet.cn/tutorial/configuration-guide/lazyload.html
 # ---------------------------------------------------------------------------------------
 lazyload:
-  enable: false  # Option values: true | false
+  enable: true  # Option values: true | false
 
 # ---------------------------------------------------------------------------------------
 # CDN
@@ -281,14 +299,14 @@ cdn:
 # Docs: https://keep-docs.xpoet.cn/tutorial/configuration-guide/pjax.html
 # ---------------------------------------------------------------------------------------
 pjax:
-  enable: false  # Option values: true | false
+  enable: true  # Option values: true | false
 
 # ---------------------------------------------------------------------------------------
 # Footer settings
 # Docs: https://keep-docs.xpoet.cn/tutorial/configuration-guide/footer.html
 # ---------------------------------------------------------------------------------------
 footer:
-  since: 2020  # The starting year of your website, Can be null
+  since: 2023  # The starting year of your website, Can be null
   icp:         # ICP record number of your website, Can be null
   site_deploy:
     enable: false       # Option values: true | false

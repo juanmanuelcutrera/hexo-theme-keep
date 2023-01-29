@@ -57,6 +57,7 @@ $toc-container-width = 15rem
       color var(--text-color-2)
       font-weight 600
       font-size $article-title-font-size
+      line-height: 2rem;
 
       +keep-tablet() {
         font-size $article-title-font-size * 0.9
@@ -180,12 +181,14 @@ $toc-container-width = 15rem
       font-size 1.1rem
 
       +keep-tablet() {
-        display flex
+        /*display flex*/
+        display none
       }
 
       +keep-mobile() {
-        margin-top 1.2rem
-        font-size 1rem
+          /*margin-top 1.2rem
+      font-size 1rem*/
+      display none   
       }
 
 

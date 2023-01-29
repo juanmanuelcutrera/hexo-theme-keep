@@ -163,6 +163,22 @@ $dark-article-aging-tips-border-color = alpha($dark-article-aging-tips-color, 0.
 // ==============================================================================================
 // font settings
 // ==============================================================================================
+@font-face
+  font-style: normal
+  font-family: "Meslo LG"
+  src: local("Meslo LG S"), url("../webfonts/MesloLGS-Regular.ttf") format("truetype")
+
+@font-face
+  font-style: normal
+  font-family: "trashhand"
+  src: local("trashhand"), url("../webfonts/TrashHand.TTF") format("truetype")
+
+  @font-face
+  font-style: normal
+  font-family: "typewcond"
+  src: local("typewcond"), url("../webfonts/typewcond_regular.otf") 
+
+
 $preset-font-family = Optima-Regular, Optima, PingFang SC, Microsoft YaHei, sans-serif
 $custom-font-family = hexo-config('style.font_family')
 $default-font-family = $custom-font-family ? convert($custom-font-family) : $preset-font-family

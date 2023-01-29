@@ -45,3 +45,12 @@ const {
 <% if (t_pjax?.enable === true) { %>
     <%- partial('pjax/pjax') %>
 <% } %>
+
+<%- __js([
+   
+'js/prismjs/prism.js',
+'js/prismjs/plugins/toolbar/prism-toolbar.js',
+'js/prismjs/plugins/line-numbers/prism-line-numbers.min.js',
+'js/prismjs/plugins/autoloader/prism-autoloader.min.js',
+'js/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js'
+]) %>

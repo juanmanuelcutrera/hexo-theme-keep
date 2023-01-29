@@ -41,14 +41,16 @@ if (t_cdn_enable === true) {
 
             try {
               Gitalk && new Gitalk({
-                clientID: '<%= client_id %>',
-                clientSecret: '<%= client_secret %>',
-                repo: '<%= repository %>',
-                owner: '<%= github_id %>',
-                admin: '<%= github_admins || [github_id] %>',
+                clientID: '<%= theme.comment.gitalk.client_id %>',
+                clientSecret: '<%= theme.comment.gitalk.client_secret %>',
+                repo: '<%= theme.comment.gitalk.repository %>',
+                owner: '<%= theme.comment.gitalk.github_id %>',
+                admin: ['<%= theme.comment.gitalk.github_id %>'],
                 id: __gitalk__pathname,
-                proxy: '<%= proxy %>',
-                language: '<%= config.language %>'
+                proxy: '<%= proxy %>',                
+                language: '<%= theme.comment.gitalk.language %>',               
+                distractionFreeMode: '<%= theme.comment.gitalk.distractionFreeMode %>',
+                enableHotKey: '<%= theme.comment.gitalk.enableHotKey %>'
               }).render('gitalk-container');
             } catch (e) {
               window.Gitalk = null;

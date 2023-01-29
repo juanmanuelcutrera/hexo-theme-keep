@@ -13,6 +13,22 @@
                     </a>
                 </h3>
 
+                <span style="display: inline-block; height: 2px;"></span>
+                <% if (post["header-img-thumb"]) { %>
+                    <img src='<%= post["header-img-thumb"] || config.root + config["header-img-thumb"] %>'                  
+                    loading="lazy"
+                    decoding="async" 
+                    alt='<%= post["header-img-alt"] || config.root + config["header-img-alt"] %>'
+                    title='<%= post["header-img-title"] || config.root + config["header-img-title"] %>'
+                    style="
+                    margin-left: auto;
+                    margin-right: auto;  
+                    width: 88%;              
+                    background-size: cover; 
+                    background-position: center center;
+                    background-repeat: no-repeat;"/>   
+                <% } %>
+
                 <div class="home-article-content keep-markdown-body">
                     <% if (post.excerpt) { %>
                         <%- post.excerpt %>

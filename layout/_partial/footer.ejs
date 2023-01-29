@@ -15,11 +15,17 @@ const { site_uv: bsz_site_uv, site_pv: bsz_site_pv, enable: bsz_enable } = theme
             <% if (f_since) { %>
                 <span><%= f_since %></span> -
             <% } %>
+  
             <%= date(new Date(), 'YYYY') %>
             <% if (bi_author || hexo_author) { %>
-                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                
                 &nbsp;<a href="/"><%= bi_author || hexo_author %></a>
             <% } %>
+
+         
+            &nbsp;|
+            <span>Todos los derechos reservados.</span>
+
         </div>
         <% if (bsz_enable === true) { %>
             <script async <%= theme.pjax.enable === true ? 'data-pjax' : '' %>

@@ -29,18 +29,7 @@ const ami_is_updated = articleObject.date !== articleObject.updated
             </ul>
         </span>
     <% } %>
-    <% if (articleObject.tags.length) { %>
-        <span class="article-tags article-meta-item">
-            <i class="fas fa-tags"></i>&nbsp;
-            <ul>
-                <% articleObject.tags.forEach((tag, i) => { %>
-                    <li>
-                        <%= i === 0 ? '' : '| ' %><a href="<%- url_for(tag.path) %>"><%= tag.name %></a>&nbsp;
-                    </li>
-                <% }); %>
-            </ul>
-        </span>
-    <% } %>
+
 
     <%
     let temp_wordcount_count, temp_min2read_count = null
