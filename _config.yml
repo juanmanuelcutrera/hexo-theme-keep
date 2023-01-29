@@ -36,7 +36,7 @@ style:
 
   # Font size, customize font size. (you don't usually have to fill)
   # e.g. font_size: 18px
-  font_size:  15.2px
+  font_size:  14px
 
   # Font family, customize font family. (you don't usually have to fill)
   # e.g. font_family: STKaiti, STSong, STHeiti
@@ -69,7 +69,7 @@ style:
     # Otherwise use the theme default font color
     font_color: "#33D09A"
 
-    font_color2: "#0066CC"
+    font_color2: "#6A9EDA"
 
 
     # If enable hitokoto, first screen description is different every time when you enter the site
