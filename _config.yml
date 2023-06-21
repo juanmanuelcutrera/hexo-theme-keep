@@ -57,13 +57,15 @@ style:
     header_transparent: true  # Option values: true | false
 
     # First screen background image (You can use local image or image external link)
-    background_img:
+    background_img: /images/Header.png
 
     # First screen description
     # You can use the "||" to begin a newline, maximum is two lines.
-    description: printf(¡Hola, mundo!);||cout << ¡Hola, mundo!;||System.out.println(¡Hola, mundo!);||Console.WriteLine(¡Hola, mundo!);||console.log(¡Hola, mundo!);||println(¡Hola, mundo!); 
+    description:     
+    # printf(¡Hola, mundo!);||cout << ¡Hola, mundo!;||System.out.println(¡Hola, mundo!);||Console.WriteLine(¡Hola, mundo!);||console.log(¡Hola, mundo!);||println(¡Hola, mundo!);     
+    description2: 
     
-    description2: Este es mi espacio de experimentación.
+     # Este es mi espacio de experimentación.
 
     # If you want to customize the first screen font color, you can fill in here (e.g. "#0066CC")
     # Otherwise use the theme default font color

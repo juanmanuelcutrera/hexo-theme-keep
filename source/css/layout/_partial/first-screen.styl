@@ -35,14 +35,30 @@ $first-screen-font-color2 = $temp-font-color2 ? convert($temp-font-color2) : var
 $first-screen-font-color3 =  var(--text-color-3)
 
 .first-screen-container {
+ 
   position relative
   box-sizing border-box
-  width 100%
-  height 100vh
 
-  
+
+  /*aquí modifiqué*/
+  /*height 100vh*/
+  height 62vh
+    
+ 
+  /*aquí modifiqué*/
+  /*margin-top 10vh*/
+  top 80px
+
+  margin-left auto
+  margin-right auto  
+             
+  /*background-size cover
+  background-position center center
+  background-repeat no-repeat */ 
+   
   overflow hidden
-  background url($first-screen-img) center center / cover no-repeat
+  background url($first-screen-img) center center / contain no-repeat
+
 
   if (!(hexo-config('style.first_screen.header_transparent') == true)) 
   {
@@ -54,15 +70,15 @@ $first-screen-font-color3 =  var(--text-color-3)
 
     +keep-mobile() {
       background-position-y $header-height * 0.8
+      
     }
-
     
   }
 
   .content {
     position relative
     box-sizing border-box
-    width 100%
+    /*width 100%*/
     height 90%
     padding-top 1rem
 
@@ -90,15 +106,17 @@ $first-screen-font-color3 =  var(--text-color-3)
       }
 
       +keep-tablet() {
+        
         font-size $first-screen-font-size * 0.9
       }
 
       
       +keep-mobile() {
 
-        height 100%
-        padding-top 3rem
-
+         /*aquí modifiqué*/
+        /*height 100%
+        padding-top 3rem*/
+    
         .desc-item 
         {
           font-size $first-screen-font-size
@@ -110,6 +128,17 @@ $first-screen-font-color3 =  var(--text-color-3)
           
         }
       }
+    
+      /*aquí modifiqué*/
+      /*
+      +keep-tablet() {
+          height 100%
+          padding-top 3rem        
+
+        
+      }*/
+
+      
     }
 
 
